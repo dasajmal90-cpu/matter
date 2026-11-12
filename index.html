@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="matter — create, connect and discover.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>matter</title>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <button class="brand" id="brand-refresh" aria-label="Double tap to refresh"><img src="assets/matter-mark.png" alt="matter emblem"><span>matter</span></button>
+    <div class="top-actions"><button class="icon-btn" aria-label="Search" data-page="Explore">⌕</button><button class="icon-btn" aria-label="Notifications">♧</button></div>
+  </header>
+
+  <main>
+    <section id="login" class="login-view">
+      <div class="login-mark"><img src="assets/matter-mark.png" alt="matter M emblem"></div>
+      <p class="eyebrow">YOUR WORLD. YOUR matter.</p>
+      <h1>Everything that<br><span>matters</span>, in one place.</h1>
+      <p class="muted">Create, connect and discover your people.</p>
+      <form id="login-form">
+        <label>Email or username<input type="text" placeholder="Enter your email or username" required></label>
+        <label>Password<input type="password" placeholder="Enter your password" required></label>
+        <button class="primary" type="submit">Continue <span>→</span></button>
+      </form>
+      <div class="or"><span></span> OR <span></span></div>
+      <button class="secondary" id="guest-btn">Explore matter</button>
+      <p class="tiny">New here? <a href="#" id="signup-link">Create an account</a></p>
+      <p class="legal">By continuing, you agree to our Terms & Privacy Policy.</p>
+    </section>
+
+    <section id="home" class="home-view hidden">
+      <div class="welcome">
+        <div><p class="eyebrow">MONDAY, YOUR SPACE</p><h1>Good to see you.</h1><p class="muted">What matters to you today?</p></div>
+        <button class="round-add" data-page="Create" aria-label="Create">＋</button>
+      </div>
+      <section class="stories">
+        <div class="section-heading"><h2>Stories</h2><a href="#" data-page="Explore">See all</a></div>
+        <div class="story-row">
+          <div class="story add-story"><div>＋</div><small>Your story</small></div>
+          <div class="story"><div class="avatar avatar-a">A</div><small>Arun</small></div>
+          <div class="story"><div class="avatar avatar-b">M</div><small>Maya</small></div>
+          <div class="story"><div class="avatar avatar-c">R</div><small>Rahul</small></div>
+          <div class="story"><div class="avatar avatar-d">S</div><small>Sana</small></div>
+          <div class="story"><div class="avatar avatar-e">J</div><small>Jeevan</small></div>
+        </div>
+      </section>
+      <section class="feed">
+        <div class="section-heading"><h2>For you</h2><button class="text-btn">Following⌄</button></div>
+        <article class="post">
+          <div class="post-user"><div class="avatar mini avatar-b">M</div><div><b>matter.community</b><small>Community spotlight · 2h</small></div><button class="dots">•••</button></div>
+          <div class="post-art art-one"><span>IDEAS<br>MOVE US.</span><small>matter / COMMUNITY</small></div>
+          <h3>Every idea starts somewhere.</h3>
+          <p class="post-copy">Share what you're creating, discover new perspectives and connect with people who care about the same things.</p>
+          <div class="post-actions"><button>♡ <span>Like</span></button><button>◯ <span>Comment</span></button><button>↗ <span>Share</span></button></div>
+        </article>
+        <article class="post">
+          <div class="post-user"><div class="avatar mini avatar-c">C</div><div><b>creative.corner</b><small>Design · 4h</small></div><button class="dots">•••</button></div>
+          <h3>Make something worth sharing.</h3>
+          <p class="post-copy">Your next idea could start a conversation. Bring it to matter.</p>
+          <div class="post-actions"><button>♡ <span>Like</span></button><button>◯ <span>Comment</span></button><button>↗ <span>Share</span></button></div>
+        </article>
+      </section>
+    </section>
+
+    <section id="reels" class="reels-view hidden">
+      <div class="page-head"><div><p class="eyebrow">SHORT VIDEOS · DISCOVER</p><h1>infinity</h1></div><button class="text-btn">Following⌄</button></div>
+      <div class="reel-card reel-one"><div class="reel-top"><span>FOR YOU</span><span>•••</span></div><div class="reel-center"><div class="play">▶</div><p>CREATE<br>WITHOUT LIMITS.</p></div><div class="reel-bottom"><div><b>@matter.creators</b><p>Ideas, moments and stories worth your time.</p><small>#CreateOnMatter #Ideas</small></div><div class="reel-stats"><span>♡ 2.4k</span><span>◯ 184</span><span>↗ Share</span></div></div></div>
+      <div class="reel-hint">Swipe up to discover more <span>↑</span></div>
+    </section>
+
+    <section id="messages" class="messages-view hidden">
+      <div class="page-head"><div><p class="eyebrow">YOUR CONNECTIONS</p><h1>Messages</h1></div><div class="message-head-actions"><button class="snap-compose" id="open-snap">◉ <span>One-time snap</span></button><button class="round-add" aria-label="New message">＋</button></div></div>
+      <div class="search-box">⌕ <span>Search conversations</span></div>
+      <div class="message-filters"><button class="selected">All</button><button>Unread</button><button>Groups</button></div>
+      <div class="conversation"><div class="avatar avatar-a">A</div><div class="conversation-info"><b>Arun</b><p>That new idea looks great!</p></div><button class="nickname-edit" data-friend="Arun" aria-label="Set nickname for Arun">✎</button><time>2m</time><i class="unread"></i></div>
+      <div class="conversation"><div class="avatar avatar-b">M</div><div class="conversation-info"><b>Maya</b><p>Sent you a photo</p></div><button class="nickname-edit" data-friend="Maya" aria-label="Set nickname for Maya">✎</button><time>18m</time></div>
+      <div class="conversation"><div class="avatar avatar-c">C</div><div class="conversation-info"><b>Creative Circle</b><p>Rahul: Shared a new post</p></div><button class="nickname-edit" data-friend="Creative Circle" aria-label="Set nickname for Creative Circle">✎</button><time>1h</time><i class="unread"></i></div>
+      <div class="conversation"><div class="avatar avatar-d">S</div><div class="conversation-info"><b>Sana</b><p>See you tomorrow!</p></div><button class="nickname-edit" data-friend="Sana" aria-label="Set nickname for Sana">✎</button><time>Yesterday</time></div>
+      <div class="conversation"><div class="avatar avatar-e">J</div><div class="conversation-info"><b>Jeevan</b><p>Thanks for the feedback.</p></div><button class="nickname-edit" data-friend="Jeevan" aria-label="Set nickname for Jeevan">✎</button><time>Mon</time></div>
+      <p class="demo-note">Tap ✎ to set a private nickname. One-time snaps disappear from this demo after opening; real secure delivery comes later.</p>
+    </section>
+
+    
+    <section id="games" class="games-view hidden">
+      <div class="games-header">
+        <div><p class="eyebrow">matter PLAY</p><h1>Game Zone</h1><p class="muted">Play together. Win together.</p></div>
+        <div class="coin-wallet"><span class="coin-icon">✦</span><div><b id="coin-balance">0</b><small>COINS</small></div></div>
+      </div>
+      <div class="game-banner">
+        <div><span class="banner-tag">MULTIPLAYER ONLY</span><h2>Good games.<br>Better company.</h2><p>Invite friends or find players online.</p></div>
+        <div class="banner-symbol">♟</div>
+      </div>
+      <div class="section-heading game-section-heading"><h2>Choose a game</h2><span class="online-label"><i></i> Multiplayer</span></div>
+      <div class="game-list">
+        <article class="game-card">
+          <div class="game-art ludo-art"><span>♟</span><small>CLASSIC BOARD GAME</small></div>
+          <div class="game-info"><div><h3>Ludo</h3><p>Classic multiplayer matches</p></div><span class="players">2–4 PLAYERS</span></div>
+          <button class="game-join" data-game="Ludo">Play with friends <span>→</span></button>
+        </article>
+        <article class="game-card">
+          <div class="game-art snake-art"><span>〰</span><small>ARCADE CHALLENGE</small></div>
+          <div class="game-info"><div><h3>Snake Master</h3><p>Compete with friends in real time</p></div><span class="players">2 PLAYERS</span></div>
+          <button class="game-join" data-game="Snake Master">Play with friends <span>→</span></button>
+        </article>
+        <article class="game-card compact-game">
+          <div class="mini-game-icon">✦</div><div class="game-info"><div><h3>More games coming</h3><p>Quick multiplayer games are on the way</p></div></div>
+        </article>
+      </div>
+      <div class="reward-panel">
+        <div><p class="eyebrow">PLAY & EARN</p><h2>Win matches. Earn coins.</h2><p>Coins can unlock selected matter premium features.</p></div>
+        <div class="reward-coin">✦</div>
+        <div class="reward-rates"><span>Ludo win <b>+25 coins</b></span><span>Snake Master win <b>+20 coins</b></span></div>
+      </div>
+      <div class="premium-panel">
+        <div class="section-heading"><h2>Coin Store</h2><span class="store-label">PREMIUM PERKS</span></div>
+        <div class="perk-row"><div class="perk-icon">✧</div><div class="perk-copy"><b>Profile glow</b><small>A subtle premium profile accent</small></div><button class="redeem" data-cost="100" data-perk="Profile glow">100 ✦</button></div>
+        <div class="perk-row"><div class="perk-icon">▧</div><div class="perk-copy"><b>Exclusive story frames</b><small>Stand out in Stories</small></div><button class="redeem" data-cost="150" data-perk="Exclusive story frames">150 ✦</button></div>
+        <div class="perk-row"><div class="perk-icon">◈</div><div class="perk-copy"><b>Premium app theme</b><small>Unlock an alternate matter look</small></div><button class="redeem" data-cost="250" data-perk="Premium app theme">250 ✦</button></div>
+      </div>
+      <p class="game-disclaimer">Coins are virtual rewards with no cash value. Multiplayer matches and verified win rewards will be enabled when the game servers are connected.</p>
+    </section>
+\n    <section id="profile" class="profile-view hidden">
+      <div class="profile-top"><div><p class="eyebrow">YOUR CREATOR SPACE</p><h1>Profile</h1></div><button class="profile-settings" aria-label="Profile settings">⚙</button></div>
+      <div class="profile-identity">
+        <div class="profile-avatar-wrap"><div class="profile-avatar">A</div><span class="profile-online"></span></div>
+        <div class="profile-name-block"><h2>Ajmal <span class="verified-tick" title="Verified profile" aria-label="Verified">✓</span></h2><p>@ajmal.creator</p><span class="profile-tag">matter creator</span></div>
+        <button class="edit-profile">Edit profile</button>
+      </div>
+      <div class="profile-stats">
+        <div><b>128</b><span>Posts</span></div><div><b>12.8K</b><span>Followers</span></div><div><b>486K</b><span>Likes</span></div><div><b>342</b><span>Following</span></div>
+      </div>
+      <div class="profile-coins"><div class="coin-medal">✦</div><div><small>YOUR REWARDS</small><b><span id="profile-coin-balance">0</span> coins</b></div><button data-page="Games">Earn more <span>→</span></button></div>
+      <div class="profile-views-total"><div><small>PUBLIC VIDEO VIEWS</small><b>7.7M</b></div><span>Views are visible to everyone</span></div>
+      <div class="profile-tabs"><button class="selected" data-profile-tab="videos">▦ Videos</button><button data-profile-tab="liked">♡ Liked</button><button data-profile-tab="saved">▤ Saved</button></div>
+      <div class="profile-video-grid">
+        <article class="profile-video"><div class="video-thumb thumb-one"><span>▶</span><b>CREATING THE FUTURE</b></div><div class="video-metrics">▶ 1.2M views</div></article>
+        <article class="profile-video"><div class="video-thumb thumb-two"><span>▶</span><b>MY FIRST BIG IDEA</b></div><div class="video-metrics">▶ 845K views</div></article>
+        <article class="profile-video"><div class="video-thumb thumb-three"><span>▶</span><b>BEHIND THE SCENES</b></div><div class="video-metrics">▶ 980K views</div></article>
+        <article class="profile-video"><div class="video-thumb thumb-four"><span>▶</span><b>LET'S BUILD</b></div><div class="video-metrics">▶ 2.4M views</div></article>
+        <article class="profile-video"><div class="video-thumb thumb-five"><span>▶</span><b>CREATOR LIFE</b></div><div class="video-metrics">▶ 560K views</div></article>
+        <article class="profile-video"><div class="video-thumb thumb-six"><span>▶</span><b>NEW CHAPTER</b></div><div class="video-metrics">▶ 1.7M views</div></article>
+      </div>
+      <p class="profile-demo-note">Sample profile data. Public views will be counted by the server. Creator badge eligibility: one video reaches 1M views or the profile reaches 100M total views, plus identity review. Official blue ticks can also be assigned to profiles approved by matter.</p>
+    </section>
+    <section id="other" class="other-view hidden"><p class="eyebrow">matter / DISCOVER</p><h1 id="other-title">Explore</h1><p class="muted" id="other-copy">Find creators, topics and communities.</p><div class="explore-tile"><span>01 / COMMUNITIES</span><b>Find your people.</b></div><div class="explore-tile"><span>02 / TRENDING</span><b>See what's moving.</b></div></section>
+    <section id="create" class="other-view hidden"><p class="eyebrow">MAKE IT matter</p><h1>Create</h1><p class="muted">Share a thought, photo, video or start a discussion.</p><div class="create-options"><button>＋ <b>Post</b><small>Share with your feed</small></button><button>▶ <b>Reel</b><small>Make a short video</small></button><button>◉ <b>Story</b><small>A moment that lasts 24 hours</small></button></div></section>
+  </main>
+
+  <button id="game-edge" class="game-edge hidden" aria-label="Open Game Zone"><span>♟</span><small>GAMES</small></button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="snap-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="snap-title">
+    <div class="modal-card snap-card">
+      <button id="snap-close" class="modal-close" aria-label="Close">×</button>
+      <p class="eyebrow">PRIVATE MOMENT</p><h2 id="snap-title">Send a one-time snap</h2>
+      <label class="snap-label">Send to<select id="snap-recipient"><option>Arun</option><option>Maya</option><option>Rahul</option><option>Sana</option><option>Jeevan</option></select></label>
+      <label class="snap-label">Snap note<textarea id="snap-note" rows="3" placeholder="Add a short note for your snap…"></textarea></label>
+      <p class="snap-warning">Designed to be opened once in the real app. This prototype only previews the flow.</p>
+      <button class="primary" id="send-snap">Send one-time snap ↗</button>
+    </div>
+  </div>
+  <div id="game-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card"><button id="modal-close" class="modal-close" aria-label="Close">×</button><p class="eyebrow">MULTIPLAYER LOBBY</p><h2 id="modal-title">Ludo</h2><p id="modal-copy">Choose how you want to play.</p><button class="primary" id="create-room">Create private room</button><button class="secondary modal-secondary" id="join-room">Join with room code</button><p class="modal-note">Online matchmaking and live multiplayer are part of the next development stage.</p></div>
+  </div>
+  <nav id="nav" class="bottom-nav hidden" aria-label="Main navigation">
+    <button class="active" data-page="Home"><span>⌂</span>Home</button>
+    <button data-page="Reels"><span>∞</span>Infinity</button>
+    <button class="create-nav" data-page="Create"><span>＋</span></button>
+    <button data-page="Messages"><span>✉</span>Messages</button>
+    <button data-page="Profile"><span>○</span>Profile</button>
+  </nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
